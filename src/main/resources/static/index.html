@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <script scr="index.js"></script>
+</head>
+<body>
+<div class="container" ng-controller="indexController">
+<h1>Список студентов</h1>
+    <table class="table table-hover">
+        <tr>
+            <td>ID</td>
+            <td>Имя студента</td>
+            <td>Возраст студента</td>
+        </tr>
+        <tbody>
+        <tr ng-repeat="s in StudentList">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.age}}</td>
+            <td>
+                <button class="btn btn-danger" ng-click="deleteStudent(s.id)">Удалить</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
